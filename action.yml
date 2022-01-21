@@ -1,0 +1,19 @@
+name: 'Generate Docs for parkdoc'
+description: Uploads go docs and invalidates cache.
+author: Trace Baxter
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.args }}
+inputs:
+  TOKEN:
+    description: Github Token
+    required: true
+  AWS_ACCESS_KEY_ID:
+    description: aws key id
+    required: true
+  AWS_SECRET_ACCESS_KEY:
+    description: aws access key
+    required: true
