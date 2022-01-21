@@ -6,7 +6,9 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.args }}
+    - ${{ inputs.TOKEN }}
+    - ${{ inputs.AWS_ACCESS_KEY_ID }}
+    - ${{ inputs.AWS_SECRET_ACCESS_KEY }}
 inputs:
   TOKEN:
     description: Github Token
