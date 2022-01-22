@@ -13,14 +13,14 @@ RUN unzip awscliv2.zip
 RUN ./aws/install
 
 
-ARG TOKEN
+## ARG TOKEN
 RUN git config --global url."https://${TOKEN}@github.com/".insteadOf "https://github.com/"
 
 COPY ./ ./
 RUN mkdir /tmp/docs
 
-ARG AWS_ACCESS_KEY_ID
-ARG AWS_SECRET_ACCESS_KEY
+## ARG AWS_ACCESS_KEY_ID
+## ARG AWS_SECRET_ACCESS_KEY
 ENV AWS_DEFAULT_REGION=us-east-1
 ENV AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
