@@ -12,7 +12,7 @@ import (
 
 func main() {
 	src := oauth2.StaticTokenSource(
-		&oauth2.Token{AccessToken: ""},
+		&oauth2.Token{AccessToken: os.Getenv("TOKEN")},
 	)
 	httpClient := oauth2.NewClient(context.Background(), src)
 	client := githubv4.NewClient(httpClient)
