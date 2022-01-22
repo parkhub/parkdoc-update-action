@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# set git creds
+git config --global url."https://${TOKEN}@github.com/".insteadOf "https://github.com/"
+
 # Generate Documentation
 /var/clone
 godoc-static -destination /tmp/docs github.com/parkhub
