@@ -20,5 +20,8 @@ RUN mkdir /tmp/docs
 
 ENV AWS_DEFAULT_REGION=us-east-1
 ENV TOKEN=$TOKEN
+RUN pwd
+RUN ls
+RUN chmod +x upload.sh
 
 ENTRYPOINT ./upload.sh
