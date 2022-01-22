@@ -12,17 +12,10 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
 RUN unzip awscliv2.zip
 RUN ./aws/install
 
-ARG TOKEN
-RUN git config --global url."https://${TOKEN}@github.com/".insteadOf "https://github.com/"
-
 COPY main.go go.mod go.sum upload.sh ./
 RUN go build -o clone .
 RUN mkdir /tmp/docs
 
 ENV AWS_DEFAULT_REGION=us-east-1
-ENV TOKEN=$TOKEN
-RUN pwd
-RUN ls
-RUN chmod +x upload.sh
 
 ENTRYPOINT ["sh", "/var/upload.sh"]
