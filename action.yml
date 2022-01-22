@@ -5,17 +5,17 @@ author: Trace Baxter
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.TOKEN }}
-    - ${{ inputs.AWS_ACCESS_KEY_ID }}
-    - ${{ inputs.AWS_SECRET_ACCESS_KEY }}
-inputs:
-  TOKEN:
-    description: Github Token
-    required: true
-  AWS_ACCESS_KEY_ID:
-    description: aws key id
-    required: true
-  AWS_SECRET_ACCESS_KEY:
-    description: aws access key
-    required: true
+#   args:
+#     - ${{ inputs.TOKEN }}
+#     - ${{ inputs.AWS_ACCESS_KEY_ID }}
+#     - ${{ inputs.AWS_SECRET_ACCESS_KEY }}
+# inputs:
+#   TOKEN:
+#     description: Github Token
+#     required: true
+#   AWS_ACCESS_KEY_ID:
+#     description: aws key id
+#     required: true
+#   AWS_SECRET_ACCESS_KEY:
+#     description: aws access key
+#     required: true
