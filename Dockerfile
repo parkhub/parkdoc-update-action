@@ -16,6 +16,7 @@ ARG TOKEN
 RUN git config --global url."https://${TOKEN}@github.com/".insteadOf "https://github.com/"
 
 COPY main.go go.mod go.sum upload.sh ./
+RUN go build -o clone .
 RUN mkdir /tmp/docs
 
 ENV AWS_DEFAULT_REGION=us-east-1
