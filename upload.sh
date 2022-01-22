@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Generate Documentation
-go run main.go
+go run /var/main.go
 godoc-static -destination /tmp/docs github.com/parkhub
 
 # Upload documentation to website
