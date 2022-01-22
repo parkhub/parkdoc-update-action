@@ -24,4 +24,4 @@ RUN pwd
 RUN ls
 RUN chmod +x upload.sh
 
-ENTRYPOINT ./upload.sh
+ENTRYPOINT ["sh", "/var/upload.sh"]
