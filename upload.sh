@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # set git creds
-git config --global url."https://${TOKEN}@github.com/".insteadOf "https://github.com/"
+git config --global url."https://x-access-token:${TOKEN}@github.com/".insteadOf "https://github.com/"
 
 # Generate Documentation
 /var/clone
